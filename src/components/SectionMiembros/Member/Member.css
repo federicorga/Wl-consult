@@ -1,0 +1,54 @@
+.div-Content-Miembro{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    margin-left: 10px;
+    max-width: 550px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.div-Content-Miembro img{
+    width: 100%;
+    border-radius: 20px 20px 20px 20px;
+
+}
+.div-info-Miembro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.2rem;
+    width: 100%;
+}
+
+.div-info-Miembro h2{
+    font-size: 25px;
+    font-family: Public Sans,sans-serif;
+    color: rgb(28 56 71);
+}
+
+.div-info-Miembro h3{
+    padding-top: 1rem;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6em;
+    font-family: Public Sans,sans-serif;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .div-Content-Miembro{
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .div-Content-Miembro img{    width: 95%;}
+
+
+
+
+}

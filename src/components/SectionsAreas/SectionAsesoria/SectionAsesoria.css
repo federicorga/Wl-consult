@@ -1,0 +1,77 @@
+.section-contain-Asesoria-all{
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.Seccion-CardsServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    padding-bottom: 200px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Seccion-CardsServicios2 {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    padding-bottom: 200px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.group-Card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.section-Asesoria {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+    padding-right: 36px;
+    padding-left: 41px;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+.section-Asesoria p{
+    font-family: var(--ff-text-p-legal);
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 0.9rem;
+}
+
+.section-Asesoria h2 {
+   /* padding-left: 10%;*/
+    /* padding-right: 10%; */
+}
+
+.section-Asesoria h3 {
+    padding-top: 10px;
+    padding-right: 10%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .section-contain-Asesoria-all{
+        padding: 40px 20px 40px 20px
+    }
+
+    .Seccion-CardsServicios{
+        grid-template-columns: repeat(1, 0fr); 
+    }
+
+    .Seccion-CardsServicios2{
+        grid-template-columns: repeat(1, 0fr);
+    }
+}

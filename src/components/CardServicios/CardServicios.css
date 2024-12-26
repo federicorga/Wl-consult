@@ -1,0 +1,48 @@
+figure {
+  margin: 5px;
+  display: grid;
+  padding: 5px;
+  border: 1px solid #8a8a8a;
+  grid-template-columns: repeat(1, 100%);
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: center;
+
+  }
+  figure > * {
+    grid-area: 1/1;
+    transition: .4s;
+  }
+  figure figcaption {
+    
+    font-family: var(--ff-textp);
+    font-size: 150%;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0.75rem;
+    width: 74%;
+    background: #00000091;
+    clip-path: inset(0 var(--_i, 0%) 0 0);
+    margin: -1px;
+  }
+  figure:hover figcaption{
+    --_i: 0%;
+  }
+  figure:hover img {
+    transform: scale(1.2);
+  }
+
+
+
+  figure img{
+    height: 18rem;
+    width: 27rem;
+    border-radius: 5px;
+  }
+  @supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+    
+     color: #fff;
+    }
+  }

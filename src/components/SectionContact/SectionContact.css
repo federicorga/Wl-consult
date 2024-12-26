@@ -1,0 +1,123 @@
+
+.div-content-All-Contact{
+    padding-top: 30px;
+}
+
+
+.Section-Mapa-Contacto{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+.Section-Mapa-Contacto h3{
+    margin: -8px 0 44px 12px;
+    padding: 0 0 0 28px;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    border-color: #b1976b;
+    color: var(--clr-color-article-title);
+    font-family: var(--ff-text-p-legal);
+    margin-top: 10px;
+}
+
+.mapa-contact{
+    margin-top: 20px;
+}
+.section-content-all-contact{
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.div-content-contact-titles{
+    color: var(--clr-color-article-title);
+}
+
+
+.div-content-contact-title-map{
+    display: flex;
+    color: var(--clr-color-article-title);
+    padding-bottom: 10px;
+}
+
+
+.div-elementor-ico-list-items-contact{
+    margin: -8px 0 44px 12px;
+    padding: 0 0 0 28px;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+
+    border-color: #b1976b;
+    color: var(--clr-color-article-title);
+    font-family: var(--ff-text-p-legal);
+    margin-top: 10px;
+}
+.elementor-icon-list-items{
+    list-style: none;
+}
+
+.div-content-contact-titles{
+    display: flex;
+
+}
+
+.div-content-contact-titles h2{
+    font-size: 1.5rem;
+    padding-left: 5px;
+    font-weight: 900;
+}
+
+.elementor-icon-list-item{
+    margin-top: calc(4px/2);
+    width: 23rem;
+   
+}
+
+.elementor-icon-list-item a{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: 5px;
+    font-family: var(--ff-text-p-legal);
+    color: var(--clr-color-article-title);
+    text-decoration: none;
+}
+
+.elementor-icon-list-item a:hover{
+    transition: 0.2s;
+    color: #8fa6bd;
+}
+
+.elementor-icon-list-text{
+    padding-left: 5px;
+    font-size: inherit;
+}
+
+
+@media screen and (max-width: 768px){
+    .section-content-all-contact{
+        padding: 100px 10px 100px 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .div-content-All-Contact {
+        width: 100%;
+    }
+
+    .mapa-contact{
+        width: 90%;
+        padding-left: 27px;
+
+    }
+}

@@ -1,0 +1,12 @@
+.content-all-Sectionclients{
+    display: flex
+    ;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+}
+
+.link-cliente-sectionclientes:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}

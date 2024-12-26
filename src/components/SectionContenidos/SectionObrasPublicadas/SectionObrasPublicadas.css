@@ -1,0 +1,79 @@
+.content-book{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content-book img{
+    cursor: pointer;
+    width: 600px;
+    height: 800px;
+}
+
+.content-book-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.content-book-descr{
+    display:flex ;
+    flex-direction: row-reverse;
+
+}
+
+.btn-comprar-libro{
+   
+    cursor: pointer;
+    background-color: var(--andes-color-blue-500, #3483fa);
+    border-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    display: inline-block;
+    font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    width: 200px;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 25px;
+}
+
+.btn-comprar-libro:hover{
+    background-color: var(--andes-color-blue-600, #2968c8);
+    border-color: transparent;
+    color: #fff;
+}
+
+
+.disponible-articulo-eficiencia-ferro{
+    margin-top: 100px;
+    width: 500px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+.content-book-descr {
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+
+    .content-book-text {
+        display: flex;
+        flex-direction: column;
+       margin: 0;
+       margin-top: 25px;
+    }
+
+    .content-book img {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+}

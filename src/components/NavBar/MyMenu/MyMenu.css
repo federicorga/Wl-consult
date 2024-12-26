@@ -1,0 +1,49 @@
+
+
+.nav-list li{
+    padding: 5px;
+}
+
+
+.nav-list a{
+    color: var(--clr-color-nav-bar);
+
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-list a:hover{
+   
+    color: var( --clr-color-hover-text1);
+}
+
+
+.btn-dropdown-contenido{
+    color: var(--clr-color-nav-bar);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown-contenido {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-contenido-submenu {
+    list-style-type: none;
+    position: absolute;
+    top: 100%;  /* Posiciona el submenú justo debajo del menú principal */
+    left: 0;
+    background-color: black ;
+    width: 200px; /* Ancho del submenú */
+    opacity: 0; /* Inicialmente oculto */
+    pointer-events: none; /* Previene la interacción cuando el submenú está oculto */
+    transform: translateY(10px); /* Desplaza ligeramente el submenú hacia abajo al mostrarse */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+  }
+  
+  .dropdown-contenido:hover .dropdown-contenido-submenu {
+    opacity: 1; /* Hace que el submenú sea visible */
+    pointer-events: auto; /* Permite la interacción con el submenú */
+    transform: translateY(0); /* Restaura la posición al mostrarse */
+  }

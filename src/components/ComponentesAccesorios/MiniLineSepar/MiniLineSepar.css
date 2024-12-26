@@ -1,0 +1,22 @@
+.min-line-Separ{
+    text-align: center;
+    margin: 0 0 0 40px;
+    position: relative;
+    width: 32px;
+    height: 0;
+
+}
+
+.min-line-Separ::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 81px;
+    font-weight: 900;
+    height: 3px;
+    border-radius: 4px;
+    margin-left: -35px;
+    background: #6699cc;
+}

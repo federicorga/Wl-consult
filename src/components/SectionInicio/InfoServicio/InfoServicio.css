@@ -1,0 +1,65 @@
+.Section-InfoServicio-Grups-All{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--clr-color-article-title);
+    justify-content: space-around;
+}
+
+.InfoServicio-Card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Section-InfoServicio-Grups-All h2{
+    padding-top: 10px;
+}
+
+.sub-info-servh2{
+    font-size: 1.2em !important;
+}
+
+.content-InfoServicio-Grups{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    color: var(--clr-color-article-title);
+}
+
+.content-InfoServicio-Grups h3{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.grupoElementos-InfoServicio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;}
+
+.infoservicio-item{
+    display: flex;
+    align-items: center;
+    color: var(--clr-color-article-title);
+    padding-top: 7px;
+    
+}
+
+.padg{
+    padding-top: 0px;
+}
+
+
+
+.infoservicio-item p{
+    font-family: var(--ff-text-p-legal);
+    color: var(--clr-color-subtitle);
+    padding-left: 10px;
+    font-weight: 600;
+}
+.padmercado{
+    padding-left: 1px !important;
+}

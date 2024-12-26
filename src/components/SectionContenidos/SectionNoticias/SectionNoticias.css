@@ -1,0 +1,28 @@
+.section-noticias{
+    display: flex;
+    padding: 40px 100px 60px 100px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.section-articulos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .section-noticias{
+        padding: 40px 20px 60px 20px;
+    }
+
+    .section-articulos{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

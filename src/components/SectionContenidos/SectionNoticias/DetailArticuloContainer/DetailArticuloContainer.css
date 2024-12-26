@@ -1,0 +1,7 @@
+.Section-Contanier-Articulo-Descripcion{
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 5px;
+}

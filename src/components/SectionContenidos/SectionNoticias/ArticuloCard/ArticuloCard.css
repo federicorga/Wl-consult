@@ -1,0 +1,65 @@
+
+
+.articuloCard-div{
+    display: flex
+;
+    flex-direction: column;
+    font-family: var(--ff-text-p-legal);
+    min-height: 70px;
+    font-size: 13px;
+    min-width: 30.33333333%;
+    margin: 10px;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: var(--clr-color-background-cardnoticia);
+    border-radius: 8px;
+    justify-content: space-between;
+
+}
+
+.articuloCard-fecha-an{
+    font-size:13px;
+    font-family: var(--ff-title);
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.articuloCard-title{
+    font-family: var(--ff-title);
+    color:var( --clr-color-article-title);
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+
+
+
+.articuloCard-texto{
+    font-family: var(--ff-text-p-legal);
+    margin: 0 0 10px;
+    font-size: 12px;
+
+}
+
+.link-articuloCard{
+    display: flex;
+        font-family: var(--ff-text-p-legal);
+        font-weight: 700;
+        color: #666;
+        text-decoration: none;
+        justify-content: center;
+
+
+}
+
+.link-articulo b{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 768px) {
+    .articuloCard-div{
+        width: 100%;
+    }
+}

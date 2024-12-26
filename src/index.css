@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: auto;
+  /* Esto activa el desplazamiento suave */
+}
+
+
+
+:root {
+  /* VARIABLES WHITE */
+  --ff-textp: 'Roboto', sans-serif;
+  --ff-body: 'PT Sans', sans-serif;
+  --ff-nav-bar: 'Roboto',sans-serif;
+  --ff-title: 'Montserrat',sans-serif;
+  --ff-text-p-legal:'Montserrat Light', arial;
+  --ff-text-title2:'Libre Baskerville', serif;
+  --ff-text-title-h2:'Montserrat',sans-serif;
+  --ff-text-title-h3:'Montserrat',sans-serif;
+  --clr-color-nav-bar: rgb(255, 255, 255);
+
+  --clr-color-hover-text1: #b0c2d7;
+  --clr-color-btn-hover:#7680b8;
+ 
+  --clr-color-hover-text2:rgb(53 198 218);
+ 
+  --clr-color-title: #fff;
+  --clr-color-subtitle:#666;
+  --clr-color-line2:#6699cc;
+  --clr-color-line3:#ccc;
+  --clr-color-section1:#EFF2F6;
+  --clr-color-background2:#495077;
+  --clr-color-background-cardnoticia:#EFF2F6; 
+  --clr-color-background1:#EFF2F6;
+  --clr-color-text2:#0C2139;
+
+  --clr-color-article-title:#0C2139;
+  --clr-color-article-titleHover:#8fa6bd;
+
+
+  --clr-color-btn-Navbar:#fff;
+  --clr-color-btn-NavBarHover:#b0c2d7;
+  --clr-color-backgroundFooter:black;
+
+  --clr-color-titleh1: #fff;
+  --clr-color-titleh2A:#0C2139;
+  --clr-color-titleh3A:#369;
+  --clr-color-h2baseFWh:#0c2139;
+
+  --clr-color-ParrafoA:black;
+  --clr-color-ParrafoB:#b0c2d7;
+
+  --clr-color-btn-linkA:#666;
+  --clr-color-btn-linkAHover:#5b649c;
+  --clr-color-btnA:#27408b;
+  -clr-color-btnAHover:#27408b;
+
+  --clr-color-btn-faq:#5b649c;
+  --clr-color-btn-faq-hover:#7680be;
+  --clr-color-btn-faq-titleh2:#fcfcfc;
+  --clr-color-btn-basic:#495077;
+
+  --clr-color-background-cardnoticia:#EFF2F6;
+  --clr-color-fechatitle-cardnoticia:#666;
+
+ --clr-color-backgroundSecA:#EFF2F6;
+ --clr-color-backgroundSecB:#fff;
+ --clr-color-backgroundSecC:#0c2139;
+ --clr-colo-backgroundNavBar:#00000094;
+
+  
+  --tw-text-opacity: 1;
+
+  --ft-tamaño-pgeneral:0.9em;
+
+}
+
+body{
+  zoom: 80%;
+  font-family: var('Montserrat',sans-serif);
+  font-weight: 400;
+  
+}
+
+.tamlinasesor{
+  /*padding-left: 10%;
+  padding-right: 10%;*/
+}
+
+.tamlinasesor2{
+ /*padding-left: 10%;
+  padding-right: 10%;*/
+}
+
+.p-padding-inicio-text-obra{
+  padding-right: 100px;
+}
+
+.p-margin-inicio-text-obra{
+  margin-top: 20px;
+}
+
+
+.p-textoEstandar{
+  font-family: var(--ff-text-p-legal);
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
