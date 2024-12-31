@@ -13,6 +13,7 @@ class Pdf extends Component {
         return (
             <div style={{ position: 'absolute', width: '100%', height: '100%' }}>
                 <iframe
+                    title='Pdf de servicios de la consultora'
                     src="/docs/Servicios-WL.pdf"
                     type="application/pdf"
                     width="100%"
