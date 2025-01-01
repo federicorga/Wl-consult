@@ -13,7 +13,9 @@ function SectionClientes() {
       <LineSepar/>
 
     <div >
-    <p className='p-textoEstandar p-padding-inicio-text-obra p-margin-inicio-text-obra'> Gracias a todos ellos porque cada día confían en nosotros y en nuestros productos.</p>
+    <p className='p-textoEstandar p-padding-inicio-text-obra p-margin-inicio-text-obra'> En WL Consultora enfocamos nuestra atención en un servicio rapido enfocado en el analisis preventivo y el seguimiento de la gestión legal.
+
+Esto quiere decir que WL Consultora se ocupa no solo de la consecución del objetivo particular procurado por el cliente sino el relativo al desarrollo comercial de su emprendimiento a traves de un riguroso análisis de riesgos previo y al seguimiento de la misma hacia el objetivo economico especifico procurado por el cliente.</p>
         </div>
    
    <div className="content-all-Sectionclients">
