@@ -112,6 +112,7 @@ background-attachment: fixed;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .box-asesoramiento-inicio{
