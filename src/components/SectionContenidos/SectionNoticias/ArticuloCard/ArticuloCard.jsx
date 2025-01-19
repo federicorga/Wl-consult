@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import LineSepar from '../../../ComponentesAccesorios/LineSepar/LineSepar';
 import { scrollToTop } from '../../../../assets/main';
 
-function ArticuloCard({ articulo}) {
+function ArticuloCard({ articulo , ClassSizeArtCard}) {
     // Verifica si el objeto 'articulo' existe antes de acceder a sus propiedades
    
     if (!articulo) {
@@ -18,7 +18,7 @@ function ArticuloCard({ articulo}) {
     return (
 
         
-        <div className='articuloCard-div'>
+        <div className={`articuloCard-div ${ClassSizeArtCard ? ClassSizeArtCard : ''}`}>
             <h2 className='articuloCard-fecha-an'>{fechas}</h2>
             <p className='articuloCard-title'>{titulo}</p>
             <LineSepar/>

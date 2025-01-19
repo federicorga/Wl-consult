@@ -1,12 +1,22 @@
 import ArticuloCard from "../ArticuloCard";
 
-const ArticuloList = ({listaArticulos}) => {
+const ArticuloList = ({listaArticulos,activeLimitArt=false,maxItem=5}) => {
+
+    let articulos;
+
+
+    if(activeLimitArt){
+
     
+        articulos = listaArticulos.slice(0, maxItem);
+    
+}else{
+    articulos= listaArticulos;
+}
 
     return (
         <>
-            {listaArticulos.map(articulo => 
-            
+            {articulos.map(articulo => 
             
             <ArticuloCard key={articulo.id} articulo = {articulo}/>
            

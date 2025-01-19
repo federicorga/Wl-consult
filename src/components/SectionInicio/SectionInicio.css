@@ -12,6 +12,7 @@ background-attachment: fixed;
 
 
 
+
 .inicio-secA{
     /*background: var(--clr-color-background2);*/
     background: url('/public/img/banner-Espe.webp');
@@ -22,9 +23,9 @@ background-attachment: fixed;
     flex-direction: column;
     align-items: center;
 
-    transform: translate(0px, 1.13px);
     
 }
+
 
 .content-banner-sectA{
     padding-top: 200px;
@@ -35,6 +36,9 @@ background-attachment: fixed;
         width: 100%;
         height: 100%;
         background: #0000005e;
+    border: 1px solid #0000005c;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 .inicio-secA h2{
@@ -62,6 +66,13 @@ background-attachment: fixed;
   padding: 50px 50px;
 }
 
+.inicio-SecNoticias{
+    padding: 50px 50px 400px 2%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+}
+
 .inicio-secB h2{
     font-weight: 800;
     text-align: center;
@@ -77,8 +88,8 @@ background-attachment: fixed;
 
 
 .inicio-secD{
-    background: var( --clr-color-section1);
-    padding: 50px 50px 400px 5%;
+    background: none;
+    padding: 50px 50px 400px 2%;
 
     
 }
@@ -94,14 +105,15 @@ background-attachment: fixed;
 
     padding-top: 50px;
     padding-bottom: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 0fr);
+    padding-right: 50px;
+    display: flex;
     justify-content: center;
 }
 
 .inicio-area-gestion{
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -247,10 +259,20 @@ background-attachment: fixed;
     height: 0;
 }
 
+
+.size-artCard-inicio{
+    width: 421px;
+    height: 230px;
+}
+
 @media screen and (max-width: 768px) {
 
     .content-inicio-sub-lin {
         padding-left: 10px;
+    }
+
+    .box-asesoramiento-inicio{
+        width: 100%;
     }
 .inicio-secA h3{text-align: center;
 }

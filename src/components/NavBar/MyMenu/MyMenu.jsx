@@ -22,7 +22,7 @@ function MyMenu({ toggleMenu }) {
   */}
 
       <Link to={"/noticias"} onClick={() => {toggleMenu(); scrollToTop();}}> <BtnIndice text={'Noticias'} />  </Link> 
-      <Link to={"/clientes"} onClick={() => {toggleMenu(); scrollToTop();}}> <BtnIndice text={'Clientes'} /></Link>
+
       <Link to={"/asesoria-legal"} onClick={() => {toggleMenu(); scrollToTop();}}> <BtnIndice text={'Area de asesoramiento'} /></Link>
       <Link to={"/gestion"} onClick={() => {toggleMenu(); scrollToTop();}}> <BtnIndice text={'Area de gestión'} /></Link>
       <Link to={"/en-los-medios"} onClick={() => {toggleMenu(); scrollToTop();}}> <BtnIndice text={'En los medios'} />  </Link>

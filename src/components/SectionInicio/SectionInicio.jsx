@@ -5,11 +5,19 @@ import InfoServicio from "./InfoServicio/InfoServicio";
 import Subtitleh3 from "../ComponentesAccesorios/Subtitles/Subtitleh3/Subtitleh3";
 import BtnSection from "../BtnSection/BtnSection";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect,useState} from "react";
 import MiniLineSepar from "../ComponentesAccesorios/MiniLineSepar/MiniLineSepar";
 import { scrollToTop } from "../../assets/main";
 import { Link } from "react-router-dom";
 import CardServicios from "../CardServicios/CardServicios";
+import CarrouselGeneral from "../CarrouselGeneral/CarrouselGeneral";
+
+
+//ARTICULOS
+import { arrayArtic } from "../../assets/connectToJson";
+import ArticuloCard from "../SectionContenidos/SectionNoticias/ArticuloCard/ArticuloCard";
+
+
 
 const SectionInicio = () => {
 
@@ -27,12 +35,37 @@ const SectionInicio = () => {
     });
   }, [AosData]);
 
+
+  const [listasArticulos, setListaArticulos] = useState([]);
+
+  useEffect(() => {
+  
+    const fetchArticulos = async () => {
+      try {
+    
+        const lista= await arrayArtic;
+        setListaArticulos(lista);
+      
+      } catch (error) {
+        console.error("Error al obtener la lista de artículos:", error);
+      }
+    };
+
+    // Llamar a la función para obtener los artículos
+    fetchArticulos();
+ 
+  }, []); // El segundo argumento [] asegura que el efecto se ejecute solo una vez, equivalente a componentDidMount
+
+ 
+
   return (
  <>
     <div className='fondoInicio'>
     <Titles fontSize="35px" textTitle={`Defendemos Tus Intereses, Impulsamos Tu Negocio`}/>
   
     </div>
+
+
     
     <div className="inicio-secA">
     <div className="content-banner-sectA">
@@ -43,6 +76,11 @@ const SectionInicio = () => {
     </div>
     </div>
     </div>
+
+
+
+
+
 
     <div className="inicio-secB">
     <Subtitleh2 clase={"edit-title-h2-secC"} text={"NUESTROS SERVICIOS"}/>
@@ -57,7 +95,6 @@ const SectionInicio = () => {
       <div className="boxs-servicios-inicio-content">
         <h2>ASESORAMIENTO</h2>
         <p>Será asesorado sobre las tendencias jurídicas y legislativas relativas a las pequeñas y medianas empresas que orientaran la aplicación del derecho comercial tanto en el mercado local como en el mercado internacional.</p>
-  
         <Link className="box-link-service" onClick={scrollToTop} to={'/asesoria-legal'}>
             <p>CONCE +</p>
             </Link>
@@ -74,13 +111,18 @@ const SectionInicio = () => {
             <p>CONCE +</p>
             </Link>
       </div>
+      
     </div>
+    
     </div>
+    
 
   </section>
 
- 
 </div>
+
+
+
 
 
 
@@ -131,86 +173,82 @@ const SectionInicio = () => {
   </div>
 
 
- 
- 
-
-    
+  <div className="inicio-SecNoticias">
+      <CarrouselGeneral titleCarrousel="NOVEDADES" items={listasArticulos.slice(0, 5).map((articulo) => (
+    <ArticuloCard ClassSizeArtCard={"size-artCard-inicio"} key={articulo.id} articulo={articulo} />
+  ))}></CarrouselGeneral>
+    </div>
 
     <div className="inicio-secD">
-    <Subtitleh2 clase={"edit-title-h2-secC"} text={"NUESTRAS AREAS"} />
-    <div data-aos="flip-left">
-    <Subtitleh2 clase={"edit-title-h2-secC"} text={"Asesoramiento"} data-aos="flip-left" />
-    </div>
+    <Subtitleh2 clase={"edit-title-h2-secC"} text={"Áreas de Práctica"} />
+    
+
     <div data-aos="zoom-in">
       <div className="inicio-area-asesoria">
-      
-        <div className='group-Card'>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/sociedad-comercial`} onClick={scrollToTop}>
-        <CardServicios titulo={"Sociedades Comerciales"} img="Asesoramiento/sociedadComercial.jpg"/></Link>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/relaciones-de-consumo`} onClick={scrollToTop}>
-        <CardServicios titulo={"Relaciones de Consumo"} img="Asesoramiento/relacionesConsumo.webp"/></Link>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/contratos-de-adhesion`} onClick={scrollToTop}>
-        <CardServicios titulo={"Contratos de Adhesion"} img="Asesoramiento/contratosAderidos.jpg"/></Link> 
-        </div>
-        <div className='group-Card'>
-        <Link className='link-articuloCard'   to={`/asesoria-legal/ley-contrato-de-trabajo`} onClick={scrollToTop}>
-        <CardServicios titulo={"Ley de Contrato de Trabajo"} img="Asesoramiento/leycontrattrabajo.jpg"/></Link>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/derecho-laboral-colectivo`} onClick={scrollToTop}>
-        <CardServicios titulo={"Derecho Laboral Colectivo"} img="Asesoramiento/derecholaboralColetivo.jpg"/></Link>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/contratos-seguros`} onClick={scrollToTop}>
-        <CardServicios titulo={"Contratos de Seguros"} img="Asesoramiento/contratoseguros.jpg"/></Link>
-        </div>
-        <div className='group-Card'>
-        <Link className='link-articuloCard'   to={`/asesoria-legal/responsabilidad-penal-empresaria`} onClick={scrollToTop}>
-        <CardServicios titulo={"Responsabilidad Penal Empresaria"} img="Asesoramiento/responsabilidadpenalempresarial.jpg"/></Link>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/planificacion-del-transporte`} onClick={scrollToTop}>
-        <CardServicios titulo={"Planificación del transporte"} img="Asesoramiento/plantransp.webp"/></Link> 
-        <Link className='link-articuloCard'  to={`/asesoria-legal/Incoterms`} onClick={scrollToTop}>
-        <CardServicios titulo={"Contratos de comercio exterior"} img="Asesoramiento/comercio-exterior.jpg"/></Link> 
-        </div>
-      <div className='group-Card'>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/riesgo-de-trabajo`} onClick={scrollToTop}>
-        <CardServicios titulo={"Riesgos de Trabajo"} img="Asesoramiento/riesgoDeTrabajo.jpg"/></Link>
-        <Link className='link-articuloCard'   to={`/asesoria-legal/normas-iso9001`} onClick={scrollToTop}>
-        <CardServicios titulo={"Normas ISO 9001"} img="Asesoramiento/normaiso9001.jpg"/></Link>
-        <Link className='link-articuloCard'  to={`/asesoria-legal/normas-iso45001`} onClick={scrollToTop}>
-        <CardServicios titulo={"Normas ISO 45001"} img="Asesoramiento/normaiso45001.png"/></Link>
-      </div>
-    
+
+      <CarrouselGeneral titleCarrousel="ASESORAMIENTO"  items={[
+           <Link className='link-articuloCard'  to={`/asesoria-legal/sociedad-comercial`} onClick={scrollToTop}>
+           <CardServicios titulo={"Sociedades Comerciales"} img="Asesoramiento/sociedadComercial.jpg"/></Link>,
+           <Link className='link-articuloCard'  to={`/asesoria-legal/relaciones-de-consumo`} onClick={scrollToTop}>
+           <CardServicios titulo={"Relaciones de Consumo"} img="Asesoramiento/relacionesConsumo.webp"/></Link>,
+           <Link className='link-articuloCard'  to={`/asesoria-legal/contratos-de-adhesion`} onClick={scrollToTop}>
+           <CardServicios titulo={"Contratos de Adhesion"} img="Asesoramiento/contratosAderidos.jpg"/></Link>,
+            <Link className='link-articuloCard'   to={`/asesoria-legal/ley-contrato-de-trabajo`} onClick={scrollToTop}>
+            <CardServicios titulo={"Ley de Contrato de Trabajo"} img="Asesoramiento/leycontrattrabajo.jpg"/></Link>,
+            <Link className='link-articuloCard'  to={`/asesoria-legal/derecho-laboral-colectivo`} onClick={scrollToTop}>
+            <CardServicios titulo={"Derecho Laboral Colectivo"} img="Asesoramiento/derecholaboralColetivo.jpg"/></Link>,
+            <Link className='link-articuloCard'  to={`/asesoria-legal/contratos-seguros`} onClick={scrollToTop}>
+            <CardServicios titulo={"Contratos de Seguros"} img="Asesoramiento/contratoseguros.jpg"/></Link>,
+            <Link className='link-articuloCard'   to={`/asesoria-legal/responsabilidad-penal-empresaria`} onClick={scrollToTop}>
+            <CardServicios titulo={"Responsabilidad Penal Empresaria"} img="Asesoramiento/responsabilidadpenalempresarial.jpg"/></Link>,
+            <Link className='link-articuloCard'  to={`/asesoria-legal/planificacion-del-transporte`} onClick={scrollToTop}>
+            <CardServicios titulo={"Planificación del transporte"} img="Asesoramiento/plantransp.webp"/></Link> ,
+            <Link className='link-articuloCard'  to={`/asesoria-legal/Incoterms`} onClick={scrollToTop}>
+            <CardServicios titulo={"Contratos de comercio exterior"} img="Asesoramiento/comercio-exterior.jpg"/></Link>,
+            <Link className='link-articuloCard'  to={`/asesoria-legal/riesgo-de-trabajo`} onClick={scrollToTop}>
+            <CardServicios titulo={"Riesgos de Trabajo"} img="Asesoramiento/riesgoDeTrabajo.jpg"/></Link>,
+            <Link className='link-articuloCard'   to={`/asesoria-legal/normas-iso9001`} onClick={scrollToTop}>
+            <CardServicios titulo={"Normas ISO 9001"} img="Asesoramiento/normaiso9001.jpg"/></Link>,
+            <Link className='link-articuloCard'  to={`/asesoria-legal/normas-iso45001`} onClick={scrollToTop}>
+            <CardServicios titulo={"Normas ISO 45001"} img="Asesoramiento/normaiso45001.png"/></Link>
+
+        ]}>
+
+        </CarrouselGeneral>
+
+  
     </div>
     </div>
 
-    <div data-aos="flip-left">
-    <Subtitleh2 clase={"edit-title-h2-secC"} text={"Gestión"}  />
-    </div>
   <div data-aos="zoom-in">
     <div className="inicio-area-gestion">
 
-      <div className='group-Card'>
-      <Link className='link-articuloCard' to={`/gestion/constitucion-societaria`} onClick={scrollToTop}>
-      <CardServicios titulo={"Constitucion Societaria"} img="Gestion/constitucionsocietaria.jpeg"/></Link>
-      <Link className='link-articuloCard' to={`/gestion/locacion-inmobiliaria`} onClick={scrollToTop}>
-      <CardServicios titulo={"Locación Inmobiliaria"} img="Gestion/contratoinmobiliaria.jpg"/></Link>
-      <Link className='link-articuloCard' to={`/gestion/fondos-comercio`} onClick={scrollToTop}>
-      <CardServicios titulo={"Fondos de Comercio"} img="Gestion/fondocomercio.webp"/></Link>
-      <Link className="link-articuloCard" to={`/gestion/registro-marca-patentes`} onClick={scrollToTop}>
-    <CardServicios titulo={"Registros de Marcas y Patentes"} img="Gestion/marcaypatente.webp"></CardServicios></Link>
-      </div>
-      <div className='group-Card'>
-      <Link className='link-articuloCard' to={`/gestion/habilitaciones`} onClick={scrollToTop}>
-      <CardServicios titulo={"Habilitaciones"} img="Gestion/habilitaciones.jpg"/></Link>
-      <Link className='link-articuloCard' to={`/gestion/contratos-locacion-servicios`} onClick={scrollToTop}>
-      <CardServicios titulo={"Contratos de Locación de Servicios"} img="Gestion/contratoservicios.jpg"/></Link>
-      <Link className='link-articuloCard' to={`/gestion/contratos-locacion-obra`} onClick={scrollToTop}>
-      <CardServicios titulo={"Contratos de Locación de Obra"} img="Gestion/contratoobra.jpg"/></Link>
-      <Link className='link-articuloCard' to={`/gestion/insolvencia-patrimonial`} onClick={scrollToTop}>
-      <CardServicios titulo={"Insolvencia patrimonial"} img="Gestion/insolvenciapatrimonial.jpg"/></Link>
-      </div>
+    <CarrouselGeneral titleCarrousel="GESTIÓN" items={[
+       <Link className='link-articuloCard' to={`/gestion/constitucion-societaria`} onClick={scrollToTop}>
+       <CardServicios titulo={"Constitucion Societaria"} img="Gestion/constitucionsocietaria.jpeg"/></Link>,
+       <Link className='link-articuloCard' to={`/gestion/locacion-inmobiliaria`} onClick={scrollToTop}>
+       <CardServicios titulo={"Locación Inmobiliaria"} img="Gestion/contratoinmobiliaria.jpg"/></Link>,
+       <Link className='link-articuloCard' to={`/gestion/fondos-comercio`} onClick={scrollToTop}>
+       <CardServicios titulo={"Fondos de Comercio"} img="Gestion/fondocomercio.webp"/></Link>,
+       <Link className="link-articuloCard" to={`/gestion/registro-marca-patentes`} onClick={scrollToTop}>
+     <CardServicios titulo={"Registros de Marcas y Patentes"} img="Gestion/marcaypatente.webp"></CardServicios></Link>,
+       <Link className='link-articuloCard' to={`/gestion/habilitaciones`} onClick={scrollToTop}>
+       <CardServicios titulo={"Habilitaciones"} img="Gestion/habilitaciones.jpg"/></Link>,
+       <Link className='link-articuloCard' to={`/gestion/contratos-locacion-servicios`} onClick={scrollToTop}>
+       <CardServicios titulo={"Contratos de Locación de Servicios"} img="Gestion/contratoservicios.jpg"/></Link>,
+       <Link className='link-articuloCard' to={`/gestion/contratos-locacion-obra`} onClick={scrollToTop}>
+       <CardServicios titulo={"Contratos de Locación de Obra"} img="Gestion/contratoobra.jpg"/></Link>,
+       <Link className='link-articuloCard' to={`/gestion/insolvencia-patrimonial`} onClick={scrollToTop}>
+       <CardServicios titulo={"Insolvencia patrimonial"} img="Gestion/insolvenciapatrimonial.jpg"/></Link>
+
+    ]}></CarrouselGeneral>
 
    
     </div>
     </div>
     </div>
+
+  
  
     </>
   );
