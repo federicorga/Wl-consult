@@ -3,13 +3,27 @@ display: flex;
 justify-content: center;
     align-items: center;
 width: 100%;
-background: linear-gradient(#01040cb5, rgb(38 58 80 / 3%)),url('/public/img/opcionA.jpg');
+/*background: linear-gradient(#01040cb5, rgb(38 58 80 / 3%)),url('/public/img/opcionA.jpg');*/
+background: linear-gradient(#01040cb5, rgb(38 58 80 / 3%));
 height: 910px;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
 
+.title-principal{
+    position: absolute;
+}
+
+
+.background-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 
 
 

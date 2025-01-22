@@ -61,7 +61,13 @@ const SectionInicio = () => {
   return (
  <>
     <div className='fondoInicio'>
-    <Titles fontSize="35px" textTitle={`Defendemos Tus Intereses, Impulsamos Tu Negocio`}/>
+    <Titles classNameTitleh1={"title-principal"} fontSize="35px" textTitle={`Defendemos Tus Intereses, Impulsamos Tu Negocio`}/>
+    <video autoPlay muted loop className="background-video">
+        <source src="img/fondo-inicio.mp4" type="video/mp4" />
+       
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+    
   
     </div>
 
@@ -123,7 +129,9 @@ const SectionInicio = () => {
 
 
 
-
+<div className="video-background">
+      
+</div>
 
 
 

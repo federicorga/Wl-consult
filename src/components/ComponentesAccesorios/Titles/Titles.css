@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .contentTitleh1 h1{
@@ -17,6 +18,7 @@
     font-weight: 400;
     line-height: 60px;
     text-transform: uppercase;
+    
 }
 
 .contentTitleh1-visible h1{
@@ -29,6 +31,9 @@
     font-size: 50px;
     font-weight: 400;
     line-height: 1.5;
+  
     text-transform: uppercase;
+    text-align: center;
+    
    
 }
