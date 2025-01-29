@@ -93,7 +93,7 @@ const SectionInicio = () => {
  
 <div>
   <section className="box-services">
-  <div data-aos="fade-right">
+
     <div className="box-asesoramiento-inicio">
       <div className="boxs-servicios-inicio-content">
         <h2>ASESORAMIENTO</h2>
@@ -104,8 +104,8 @@ const SectionInicio = () => {
 
       </div>
     </div>
-    </div>
-    <div data-aos="fade-left">
+   
+   
     <div className="box-gestion-inicio">
       <div className="boxs-servicios-inicio-content">
       <h2>GESTIÓN</h2>
@@ -117,7 +117,7 @@ const SectionInicio = () => {
       
     </div>
     
-    </div>
+  
     
 
   </section>

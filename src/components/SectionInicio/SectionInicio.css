@@ -285,14 +285,7 @@ background-attachment: fixed;
         padding-left: 10px;
     }
 
-    .box-asesoramiento-inicio{
-        width: 100%;
-    }
 
-    .box-gestion-inicio{
-        width: 100%;
-        margin-top: 10px;
-    }
 .inicio-secA h3{text-align: center;
 }
 
@@ -315,6 +308,17 @@ background-attachment: fixed;
 
     .inicio-area-gestion{
         padding-right: 0px;
+    }
+
+
+    .box-asesoramiento-inicio{
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    .box-gestion-inicio{
+        width: 90%;
+        margin-top: 5px;
     }
 
 
