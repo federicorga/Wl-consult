@@ -119,7 +119,7 @@ background-attachment: fixed;
 
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 50px;
+    
     display: flex;
     justify-content: center;
 }
@@ -127,7 +127,7 @@ background-attachment: fixed;
 .inicio-area-gestion{
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 50px;
+ 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -288,6 +288,11 @@ background-attachment: fixed;
     .box-asesoramiento-inicio{
         width: 100%;
     }
+
+    .box-gestion-inicio{
+        width: 100%;
+        margin-top: 10px;
+    }
 .inicio-secA h3{text-align: center;
 }
 
@@ -303,4 +308,14 @@ background-attachment: fixed;
         padding-left: 10px;
         padding-right: 10px
     }
+
+    .inicio-area-asesoria{
+      padding-right: 0px;
+    }
+
+    .inicio-area-gestion{
+        padding-right: 0px;
+    }
+
+
 }

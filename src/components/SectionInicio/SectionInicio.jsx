@@ -11,6 +11,7 @@ import { scrollToTop } from "../../assets/main";
 import { Link } from "react-router-dom";
 import CardServicios from "../CardServicios/CardServicios";
 import CarrouselGeneral from "../CarrouselGeneral/CarrouselGeneral";
+import SliderSocios from "../SliderSocios/SliderSocios";
 
 
 //ARTICULOS
@@ -84,10 +85,6 @@ const SectionInicio = () => {
     </div>
 
 
-
-
-
-
     <div className="inicio-secB">
     <Subtitleh2 clase={"edit-title-h2-secC"} text={"NUESTROS SERVICIOS"}/>
     <InfoServicio/>
@@ -134,10 +131,10 @@ const SectionInicio = () => {
 </div>
 
 
-
+<SliderSocios></SliderSocios>
     <div className="inicio-secC">
     <div data-aos="flip-left">
-    <Subtitleh2 clase={"edit-title-h2-secC"} text={"¿Por que elegirnos?"} ></Subtitleh2>
+    <Subtitleh2 clase={"edit-title-h2-secC"} text={"¿PORQUE ELEGIRNOS?"} ></Subtitleh2>
     </div>
     <div className="content-inicio-p-sub-line-all">
       
@@ -188,7 +185,7 @@ const SectionInicio = () => {
     </div>
 
     <div className="inicio-secD">
-    <Subtitleh2 clase={"edit-title-h2-secC"} text={"Áreas de Práctica"} />
+    <Subtitleh2 clase={"edit-title-h2-secC"} text={"ÁREAS DE PRÁCTICAS"} />
     
 
     <div data-aos="zoom-in">
