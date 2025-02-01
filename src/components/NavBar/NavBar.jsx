@@ -43,6 +43,7 @@ function NavBar() {
         </button>
         <LogoWL/>
         <MyMenu toggleMenu={toggleMenus} />
+       
       </nav>
     </header>
   );

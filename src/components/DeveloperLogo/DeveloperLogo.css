@@ -1,0 +1,9 @@
+.textodesarrollador{
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo-desarrollador{
+    width: 50px;
+}

@@ -4,6 +4,7 @@ import IcoLinkedIn from "../IconsSVG/IcoLinkedIn"
 import IcoFacebook from "../IconsSVG/IcoFacebook";
 import { Link } from "react-router-dom";
 import IcoInstagram from "../IconsSVG/IcoInstagram";
+import DeveloperLogo from "../DeveloperLogo/DeveloperLogo";
 
 function SectionFooter() {
   return (
@@ -17,6 +18,7 @@ function SectionFooter() {
         <Link to={`https://www.linkedin.com/in/wl-consultora-547b302b6/`}className="icon-footer-section" target="_blank"><IcoLinkedIn width="40px"/></Link>
         <Link to={`https://www.instagram.com/wlconsultora/`}className="icon-footer-section" target="_blank"><IcoInstagram width="45px"/></Link>
       </div>
+      <DeveloperLogo></DeveloperLogo>
     </footer>
   );
 }
